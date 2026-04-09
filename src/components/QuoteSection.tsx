@@ -19,7 +19,7 @@ const QuoteSection = () => {
   };
 
   return (
-    <section id="kontak" className="py-20 px-4 lg:px-8">
+    <section id="layanan" className="py-20 px-4 lg:px-8 mx-0 md:mx-12">
       <div className="max-w-7xl mx-auto">
         <div className="grid md:grid-cols-2 gap-10 items-start">
           {/* Left - Dark card with contact info */}
@@ -32,7 +32,7 @@ const QuoteSection = () => {
             <h3 className="text-xl font-bold mb-6">Informasi Kontak</h3>
             <div className="space-y-5 mb-8">
               {contactInfo.map((item) => (
-                <div key={item.value} className="flex items-start gap-3">
+                <div key={item.value} className="flex items-center gap-3">
                   <div className="w-9 h-9 rounded-lg gradient-primary flex items-center justify-center text-primary-foreground flex-shrink-0 mt-0.5">
                     <item.icon size={16} />
                   </div>
@@ -105,7 +105,7 @@ const QuoteSection = () => {
       {/* Service tags bar */}
       <div className="max-w-7xl mx-auto mt-14">
         <div className="gradient-primary rounded-xl overflow-hidden">
-          <div className="flex overflow-x-auto">
+          <div className="flex overflow-x-auto justify-center">
             {[
               { icon: FiCode, label: "Pengembangan Website" },
               { icon: FiLayout, label: "Desain UI/UX" },
@@ -114,10 +114,10 @@ const QuoteSection = () => {
             ].map((tag) => (
               <div
                 key={tag.label}
-                className="flex items-center gap-2 px-8 py-4 text-primary-foreground text-sm font-medium whitespace-nowrap border-r border-primary-foreground/20 last:border-r-0"
+                className="flex items-center justify-center gap-2 px-8 py-4 text-primary-foreground text-sm font-medium whitespace-nowrap border-r border-primary-foreground/20 last:border-r-0"
               >
-                <tag.icon size={16} />
-                {tag.label}
+                <tag.icon size={16} className="flex-shrink-0" />
+                <span className="leading-none">{tag.label}</span>
               </div>
             ))}
           </div>

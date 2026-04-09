@@ -9,7 +9,7 @@ const steps = [
 ];
 
 const WorkProcessSection = () => (
-  <section className="py-20 px-4 lg:px-8 bg-section-alt">
+  <section className="py-20 px-4 lg:px-12 bg-section-alt">
     <div className="max-w-7xl mx-auto">
       <div className="text-center mb-14">
         <span className="text-primary font-semibold text-sm uppercase tracking-widest">Proses Kerja</span>
@@ -42,7 +42,7 @@ const WorkProcessSection = () => (
     {/* Service tags bar */}
     <div className="max-w-7xl mx-auto mt-14">
       <div className="gradient-primary rounded-xl overflow-hidden">
-        <div className="flex overflow-x-auto">
+        <div className="flex overflow-x-auto justify-center">
           {["Pengembangan Website", "Desain UI/UX", "Desain Grafis", "Keamanan Siber"].map((tag, i) => (
             <div
               key={tag}

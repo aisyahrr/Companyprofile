@@ -42,7 +42,7 @@ const HeroSection = () => (
     {/* Tags bar at bottom */}
     <div className="absolute bottom-0 left-0 right-0 gradient-primary">
       <div className="max-w-7xl mx-auto px-4 lg:px-8">
-        <div className="flex overflow-x-auto gap-0">
+        <div className="flex overflow-x-auto justify-center gap-0">
           {tags.map((tag) => (
             <div
               key={tag.label}

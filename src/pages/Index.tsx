@@ -15,7 +15,7 @@ import SubscribeSection from "@/components/SubscribeSection";
 import Footer from "@/components/Footer";
 
 const Index = () => (
-  <div className="min-h-screen">
+  <div className="min-h-screen overflow-x-hidden">
     <Navbar />
     <HeroSection />
     <AboutSection />

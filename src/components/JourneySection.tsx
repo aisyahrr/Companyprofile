@@ -35,7 +35,7 @@ const CircularProgress = ({ value }: { value: number }) => {
 };
 
 const JourneySection = () => (
-  <section className="py-20 px-4 lg:px-8 bg-section-alt">
+  <section className="py-20 px-4 lg:px-12 bg-section-alt">
     <div className="max-w-7xl mx-auto">
       <div className="mb-12">
         <span className="text-primary font-semibold text-sm uppercase tracking-widest">Perjalanan Kami</span>
@@ -53,8 +53,10 @@ const JourneySection = () => (
             transition={{ duration: 0.5, delay: i * 0.15 }}
             className="text-center"
           >
-            <CircularProgress value={stat.value} />
-            <p className="font-semibold mt-3">{stat.label}</p>
+            <div className=" mx-auto mb-4 justify-center items-center flex flex-col space-y-4">
+              <CircularProgress value={stat.value} />
+              <p className="font-semibold mt-3">{stat.label}</p>
+            </div>
           </motion.div>
         ))}
       </div>

@@ -54,7 +54,7 @@ export const services = [
 ];
 
 const ServicesSection = () => (
-  <section id="layanan" className="py-20 px-4 lg:px-8">
+  <section id="layanan" className="py-20 px-4 lg:px-8 mx-0 md:mx-12">
     <div className="max-w-7xl mx-auto">
       <div className="mb-12">
         <span className="text-primary font-semibold text-sm uppercase tracking-widest">Layanan Kami</span>
@@ -64,7 +64,7 @@ const ServicesSection = () => (
         </h2>
       </div>
       <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-        {services.slice(0, 3).map((service, i) => (
+        {services.slice(0, 6).map((service, i) => (
           <motion.div
             key={service.id}
             initial={{ opacity: 0, y: 30 }}
@@ -73,18 +73,35 @@ const ServicesSection = () => (
             transition={{ duration: 0.5, delay: i * 0.1 }}
           >
             <Link
-              to={`/layanan/${service.id}`}
-              className="block bg-card rounded-2xl p-7 border hover:shadow-xl transition-all group h-full"
-            >
-              <div className="w-14 h-14 rounded-xl gradient-primary flex items-center justify-center text-primary-foreground mb-5">
-                <service.icon size={24} />
-              </div>
-              <h3 className="text-lg font-bold mb-3 group-hover:text-primary transition-colors">{service.title}</h3>
-              <p className="text-muted-foreground text-sm leading-relaxed mb-4">{service.short}</p>
-              <span className="text-primary text-sm font-semibold flex items-center gap-1 group-hover:gap-2 transition-all">
-                Selengkapnya <FiArrowRight size={14} />
-              </span>
-            </Link>
+                to={`/layanan/${service.id}`}
+                className="group relative block bg-card rounded-2xl p-7 border hover:border-primary/20 transition-all duration-300 h-full overflow-hidden"
+              >
+                {/* ICON */}
+                <div className="w-14 h-14 rounded-xl bg-primary/10 text-primary flex items-center justify-center mb-5 group-hover:scale-110 transition">
+                  <service.icon size={24} />
+                </div>
+
+                {/* TITLE */}
+                <h3 className="text-lg font-bold mb-3 group-hover:text-primary transition-colors">
+                  {service.title}
+                </h3>
+
+                {/* DESC */}
+                <p className="text-muted-foreground text-sm leading-relaxed mb-4">
+                  {service.short}
+                </p>
+
+                {/* LINK */}
+                <span className="text-primary text-sm font-semibold flex items-center gap-1 group-hover:gap-2 transition-all">
+                  Learn more <FiArrowRight size={14} />
+                </span>
+
+                {/* 🔵 BOTTOM CURVE EFFECT */}
+                <div className="absolute left-0 bottom-0 w-full h-2 bg-primary rounded-b-2xl scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></div>
+
+                {/* ✨ HOVER LIFT */}
+                <div className="absolute inset-0 rounded-2xl group-hover:-translate-y-2 group-hover:shadow-2xl transition-all duration-300 pointer-events-none"></div>
+              </Link>
           </motion.div>
         ))}
       </div>

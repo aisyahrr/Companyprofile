@@ -12,9 +12,9 @@ const stats = [
 ];
 
 const AboutSection = () => (
-  <section id="tentang" className="py-20 px-4 lg:px-8">
+  <section id="tentang" className="py-20 px-4 lg:px-8 mx-0 md:mx-12">
     <div className="max-w-7xl mx-auto">
-      <div className="grid md:grid-cols-2 gap-12 items-center">
+      <div className="grid md:grid-cols-2 items-center">
         {/* Left - Photo Collage Mosaic */}
         <motion.div
           initial={{ opacity: 0, x: -40 }}
@@ -23,36 +23,66 @@ const AboutSection = () => (
           transition={{ duration: 0.6 }}
           className="relative"
         >
-          <div className="grid grid-cols-2 gap-4 relative">
-            {/* Top-left image */}
-            <div className="space-y-4">
-              <div className="rounded-2xl overflow-hidden h-40 md:h-48">
-                <img src={aboutImg1} alt="Tim kerja" className="w-full h-full object-cover" loading="lazy" />
+          <div className="relative grid grid-cols-2 gap-4">
+
+            {/* LEFT COLUMN */}
+            <div className="flex flex-col gap-4">
+              {/* Top Left */}
+              <div className="overflow-hidden h-44 md:h-56 rounded-[5px] rounded-tl-[90px]">
+                <img
+                  src={aboutImg1}
+                  alt="Team"
+                  className="w-full h-full object-cover"
+                />
               </div>
-              <div className="rounded-2xl overflow-hidden h-52 md:h-64">
-                <img src={aboutImg2} alt="Meeting tim" className="w-full h-full object-cover" loading="lazy" />
-              </div>
-            </div>
-            {/* Right column - offset upward */}
-            <div className="space-y-4 -mt-6">
-              <div className="rounded-2xl overflow-hidden h-52 md:h-64">
-                <img src={aboutImg3} alt="Eksekutif" className="w-full h-full object-cover" loading="lazy" />
-              </div>
-              <div className="rounded-2xl overflow-hidden h-40 md:h-48">
-                <img src={aboutImg4} alt="Kolaborasi tim" className="w-full h-full object-cover" loading="lazy" />
+
+              {/* Bottom Left */}
+              <div className="overflow-hidden h-52 md:h-64 rounded-[5px] rounded-bl-[90px]">
+                <img
+                  src={aboutImg2}
+                  alt="Meeting"
+                  className="w-full h-full object-cover"
+                />
               </div>
             </div>
 
-            {/* Center play button */}
-            <div className="absolute inset-0 flex items-center justify-center z-10">
-              <div className="w-14 h-14 rounded-full bg-primary flex items-center justify-center shadow-lg cursor-pointer hover:scale-110 transition-transform border-4 border-white">
-                <FiPlay className="text-primary-foreground ml-0.5" size={20} />
+            {/* RIGHT COLUMN */}
+            <div className="flex flex-col gap-4 ">
+              {/* Top Right */}
+              <div className="overflow-hidden h-52 w-2/3 md:h-60 rounded-[5px] rounded-tr-[90px]">
+                <img
+                  src={aboutImg3}
+                  alt="Executive"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+
+              {/* Bottom Right */}
+              <div className="overflow-hidden h-44 w-2/3 md:h-60 rounded-[5px] rounded-br-[90px]">
+                <img
+                  src={aboutImg4}
+                  alt="Collaboration"
+                  className="w-full h-full object-cover"
+                />
               </div>
             </div>
 
-            {/* Blue decorative shapes */}
-            <div className="absolute -top-3 -right-3 w-16 h-16 bg-primary rounded-2xl -z-10 opacity-80" />
-            <div className="absolute -bottom-3 -left-3 w-20 h-20 bg-primary rounded-2xl -z-10 opacity-80" />
+            {/* CENTER BADGE (kayak seal biru di gambar) */}
+            <div className="absolute inset-0 flex items-center justify-center z-20">
+              <div className="relative">
+                <div className="w-16 h-16 rounded-full bg-blue-600 flex items-center justify-center text-white shadow-xl border-4 border-white">
+                  <FiPlay size={20} className="ml-1" />
+                </div>
+
+                {/* outer ring */}
+                <div className="absolute inset-0 rounded-full border-[6px] border-blue-400 opacity-40 animate-ping"></div>
+              </div>
+            </div>
+
+            {/* DECORATIVE SHAPES */}
+            <div className="absolute -top-4 right-20 w-32 h-32 bg-blue-800 rounded-[5x] rounded-tr-[90px] -z-10 opacity-80" />
+            <div className="absolute -bottom-5 -left-4 w-52 h-52 bg-blue-600 rounded-[5px] rounded-bl-[90px] -z-10 opacity-80" />
+
           </div>
         </motion.div>
 
@@ -78,7 +108,7 @@ const AboutSection = () => (
             ))}
           </div>
 
-          <p className="text-muted-foreground leading-relaxed">
+          <p className="text-muted-foreground leading-relaxed text-justify">
             PT Royal Citra Abadi adalah perusahaan teknologi informasi yang berdedikasi untuk memberikan layanan
             terbaik dalam pengembangan website, aplikasi mobile, desain UI/UX, dan solusi IT enterprise.
             Kami percaya bahwa teknologi yang tepat dapat mempercepat pertumbuhan bisnis Anda.

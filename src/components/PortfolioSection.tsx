@@ -11,7 +11,7 @@ const works = [
 ];
 
 const PortfolioSection = () => (
-  <section id="portofolio" className="py-20 px-4 lg:px-8">
+  <section id="portofolio" className="py-20 px-4 lg:px-8 mx-0 md:mx-12">
     <div className="max-w-7xl mx-auto">
       <div className="text-center mb-12">
         <span className="text-primary font-semibold text-sm uppercase tracking-widest">Portofolio</span>

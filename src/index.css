@@ -115,3 +115,8 @@
     background-color: hsl(var(--section-alt));
   }
 }
+
+html{
+  scrollbar-width: none;
+}
+
