@@ -1,10 +1,17 @@
 import Navbar from "@/components/Navbar";
 import HeroSection from "@/components/HeroSection";
 import AboutSection from "@/components/AboutSection";
-import StatsSection from "@/components/StatsSection";
 import ServicesSection from "@/components/ServicesSection";
+import WorkProcessSection from "@/components/WorkProcessSection";
+import WhyTrustSection from "@/components/WhyTrustSection";
+import PortfolioSection from "@/components/PortfolioSection";
+import JourneySection from "@/components/JourneySection";
+import QuoteSection from "@/components/QuoteSection";
+import TestimonialsSection from "@/components/TestimonialsSection";
 import TeamSection from "@/components/TeamSection";
-import ContactSection from "@/components/ContactSection";
+import BlogSection from "@/components/BlogSection";
+import FAQSection from "@/components/FAQSection";
+import SubscribeSection from "@/components/SubscribeSection";
 import Footer from "@/components/Footer";
 
 const Index = () => (
@@ -12,10 +19,17 @@ const Index = () => (
     <Navbar />
     <HeroSection />
     <AboutSection />
-    <StatsSection />
     <ServicesSection />
+    <WorkProcessSection />
+    <WhyTrustSection />
+    <PortfolioSection />
+    <JourneySection />
+    <QuoteSection />
+    <TestimonialsSection />
     <TeamSection />
-    <ContactSection />
+    <BlogSection />
+    <FAQSection />
+    <SubscribeSection />
     <Footer />
   </div>
 );
