@@ -9,8 +9,8 @@ const stats = [
 ];
 
 const StatsSection = () => (
-  <section className="gradient-primary section-padding">
-    <div className="container-main">
+  <section className="gradient-primary py-12 px-4 lg:px-8">
+    <div className="max-w-7xl mx-auto">
       <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
         {stats.map((stat, i) => (
           <motion.div
@@ -21,9 +21,9 @@ const StatsSection = () => (
             transition={{ duration: 0.5, delay: i * 0.1 }}
             className="text-center text-primary-foreground"
           >
-            <stat.icon className="mx-auto mb-3" size={32} />
-            <div className="text-3xl md:text-4xl font-extrabold">{stat.value}</div>
-            <div className="text-sm opacity-80 mt-1">{stat.label}</div>
+            <stat.icon className="mx-auto mb-3" size={28} />
+            <div className="text-2xl md:text-3xl font-extrabold">{stat.value}</div>
+            <div className="text-xs opacity-80 mt-1">{stat.label}</div>
           </motion.div>
         ))}
       </div>
