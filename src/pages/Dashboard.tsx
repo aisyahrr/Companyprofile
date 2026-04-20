@@ -59,8 +59,11 @@ const Dashboard = () => {
               <FiBell size={16} />
               <span className="absolute top-1.5 right-1.5 w-2 h-2 bg-red-500 rounded-full" />
             </button>
-            <button className="h-9 px-3 rounded-lg border border-border flex items-center gap-2 text-sm text-foreground hover:bg-secondary">
-              <FiShare2 size={14} /> Share
+            <button
+              onClick={() => { logout(); navigate("/login", { replace: true }); }}
+              className="h-9 px-3 rounded-lg border border-border flex items-center gap-2 text-sm text-foreground hover:bg-secondary"
+            >
+              <FiLogOut size={14} /> Logout
             </button>
             <button className="w-9 h-9 rounded-lg border border-border flex items-center justify-center text-muted-foreground hover:bg-secondary">
               <FiMoreVertical size={16} />
