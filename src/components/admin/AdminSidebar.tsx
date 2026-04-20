@@ -28,6 +28,7 @@ const secondaryMenu = [
   { title: "Blog", url: "/admin/blog", icon: FiFileText },
   { title: "FAQ", url: "/admin/faq", icon: FiHelpCircle },
   { title: "Subscribers", url: "/admin/subscribers", icon: FiMail },
+  { title: "Pesan Kontak", url: "/admin/messages", icon: FiMessageSquare },
 ];
 
 const projects = [
