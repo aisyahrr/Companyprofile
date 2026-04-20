@@ -32,6 +32,7 @@ const meetings = [
 ];
 
 const Dashboard = () => {
+  const navigate = useNavigate();
   return (
     <div className="min-h-screen bg-secondary/40 flex">
       <AdminSidebar />
