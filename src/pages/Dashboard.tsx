@@ -1,17 +1,18 @@
+import { useNavigate } from "react-router-dom";
 import { AdminSidebar } from "@/components/admin/AdminSidebar";
 import { StatCard } from "@/components/admin/StatCard";
 import { SourcesChart } from "@/components/admin/SourcesChart";
 import { MiniCalendar } from "@/components/admin/MiniCalendar";
+import { logout } from "@/lib/auth";
 import {
   FiCalendar,
   FiUserX,
   FiClipboard,
   FiBell,
   FiMessageSquare,
-  FiShare2,
+  FiLogOut,
   FiMoreVertical,
   FiPlus,
-  FiSearch,
 } from "react-icons/fi";
 import { cn } from "@/lib/utils";
 
@@ -31,6 +32,7 @@ const meetings = [
 ];
 
 const Dashboard = () => {
+  const navigate = useNavigate();
   return (
     <div className="min-h-screen bg-secondary/40 flex">
       <AdminSidebar />
@@ -59,8 +61,11 @@ const Dashboard = () => {
               <FiBell size={16} />
               <span className="absolute top-1.5 right-1.5 w-2 h-2 bg-red-500 rounded-full" />
             </button>
-            <button className="h-9 px-3 rounded-lg border border-border flex items-center gap-2 text-sm text-foreground hover:bg-secondary">
-              <FiShare2 size={14} /> Share
+            <button
+              onClick={() => { logout(); navigate("/login", { replace: true }); }}
+              className="h-9 px-3 rounded-lg border border-border flex items-center gap-2 text-sm text-foreground hover:bg-secondary"
+            >
+              <FiLogOut size={14} /> Logout
             </button>
             <button className="w-9 h-9 rounded-lg border border-border flex items-center justify-center text-muted-foreground hover:bg-secondary">
               <FiMoreVertical size={16} />
