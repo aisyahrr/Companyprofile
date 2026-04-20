@@ -1,17 +1,18 @@
+import { useNavigate } from "react-router-dom";
 import { AdminSidebar } from "@/components/admin/AdminSidebar";
 import { StatCard } from "@/components/admin/StatCard";
 import { SourcesChart } from "@/components/admin/SourcesChart";
 import { MiniCalendar } from "@/components/admin/MiniCalendar";
+import { logout } from "@/lib/auth";
 import {
   FiCalendar,
   FiUserX,
   FiClipboard,
   FiBell,
   FiMessageSquare,
-  FiShare2,
+  FiLogOut,
   FiMoreVertical,
   FiPlus,
-  FiSearch,
 } from "react-icons/fi";
 import { cn } from "@/lib/utils";
 
