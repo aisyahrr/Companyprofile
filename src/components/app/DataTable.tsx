@@ -8,11 +8,11 @@ interface Column<T> {
   className?: string;
 }
 
-interface DataTableProps<T> {
+interface DataTableProps<T extends { id: string }> {
   columns: Column<T>[];
   data: T[];
-  searchKeys?: (keyof T)[];
-  filterKey?: keyof T;
+  searchKeys?: string[];
+  filterKey?: string;
   filterOptions?: string[];
   pageSize?: number;
   emptyMessage?: string;
@@ -38,11 +38,11 @@ export function DataTable<T extends { id: string }>({
     if (search && searchKeys) {
       const q = search.toLowerCase();
       f = f.filter((r) =>
-        searchKeys.some((k) => String(r[k] ?? "").toLowerCase().includes(q))
+        searchKeys.some((k) => String((r as Record<string, unknown>)[k] ?? "").toLowerCase().includes(q))
       );
     }
     if (filter !== "all" && filterKey) {
-      f = f.filter((r) => String(r[filterKey]) === filter);
+      f = f.filter((r) => String((r as Record<string, unknown>)[filterKey]) === filter);
     }
     return f;
   }, [data, search, searchKeys, filter, filterKey]);
