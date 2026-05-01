@@ -25,7 +25,7 @@ const Monitoring = () => {
         })}
       </div>
 
-      <DataTable
+      <DataTable<CertRecord>
         data={data}
         searchKeys={["customerName", "idNumber"]}
         filterKey="status"

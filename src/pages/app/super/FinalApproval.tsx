@@ -32,7 +32,7 @@ const FinalApproval = () => {
 
   return (
     <AppShell title="Final Approval" subtitle="Setujui atau tolak sertifikasi yang siap final">
-      <DataTable
+      <DataTable<CertRecord>
         data={data}
         searchKeys={["customerName", "nidiNumber", "sloNumber"]}
         onRowClick={setSelected}

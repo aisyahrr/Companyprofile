@@ -123,7 +123,7 @@ const SuperDashboard = () => {
           <div className="mb-3 flex items-center justify-between">
             <h3 className="font-bold text-slate-900">Data Terbaru</h3>
           </div>
-          <DataTable
+          <DataTable<CertRecord>
             data={certs.slice(0, 8)}
             columns={[
               { key: "customerName", label: "Pelanggan" },

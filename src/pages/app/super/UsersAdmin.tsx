@@ -48,7 +48,7 @@ const UsersAdmin = () => {
         </button>
       }
     >
-      <DataTable
+      <DataTable<ManagedUser>
         data={users}
         searchKeys={["name", "username", "email"]}
         filterKey="role"
