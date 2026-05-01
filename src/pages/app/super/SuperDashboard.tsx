@@ -3,7 +3,7 @@ import { AppShell } from "@/components/app/AppShell";
 import { StatCard } from "@/components/app/StatCard";
 import { DataTable } from "@/components/app/DataTable";
 import { StatusBadge } from "@/components/app/StatusBadge";
-import { loadCerts, loadActivity, CertStatus } from "@/lib/certStore";
+import { loadCerts, loadActivity, CertStatus, CertRecord } from "@/lib/certStore";
 import { loadUsers } from "@/lib/usersStore";
 import {
   HiOutlineUsers,
