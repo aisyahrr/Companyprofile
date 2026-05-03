@@ -26,9 +26,16 @@ import UsersAdmin from "./pages/app/super/UsersAdmin.tsx";
 import Monitoring from "./pages/app/super/Monitoring.tsx";
 import FinalApproval from "./pages/app/super/FinalApproval.tsx";
 import ActivityLogs from "./pages/app/super/ActivityLogs.tsx";
+import CmsHero from "./pages/app/super/CmsHero.tsx";
 import CmsAbout from "./pages/app/super/CmsAbout.tsx";
 import CmsServices from "./pages/app/super/CmsServices.tsx";
+import CmsTeam from "./pages/app/super/CmsTeam.tsx";
+import CmsPortfolio from "./pages/app/super/CmsPortfolio.tsx";
+import CmsTestimonials from "./pages/app/super/CmsTestimonials.tsx";
+import CmsBlog from "./pages/app/super/CmsBlog.tsx";
+import CmsFaq from "./pages/app/super/CmsFaq.tsx";
 import CmsGallery from "./pages/app/super/CmsGallery.tsx";
+import CmsContact from "./pages/app/super/CmsContact.tsx";
 import PetugasDashboard from "./pages/app/petugas/PetugasDashboard.tsx";
 import PetugasForm from "./pages/app/petugas/PetugasForm.tsx";
 import PetugasList from "./pages/app/petugas/PetugasList.tsx";
@@ -63,9 +70,16 @@ const App = () => (
           <Route path="/app/super/monitoring" element={protect(<Monitoring />, ["super_admin"])} />
           <Route path="/app/super/approval" element={protect(<FinalApproval />, ["super_admin"])} />
           <Route path="/app/super/activity" element={protect(<ActivityLogs />, ["super_admin"])} />
+          <Route path="/app/super/cms/hero" element={protect(<CmsHero />, ["super_admin"])} />
           <Route path="/app/super/cms/about" element={protect(<CmsAbout />, ["super_admin"])} />
           <Route path="/app/super/cms/services" element={protect(<CmsServices />, ["super_admin"])} />
+          <Route path="/app/super/cms/team" element={protect(<CmsTeam />, ["super_admin"])} />
+          <Route path="/app/super/cms/portfolio" element={protect(<CmsPortfolio />, ["super_admin"])} />
+          <Route path="/app/super/cms/testimonials" element={protect(<CmsTestimonials />, ["super_admin"])} />
+          <Route path="/app/super/cms/blog" element={protect(<CmsBlog />, ["super_admin"])} />
+          <Route path="/app/super/cms/faq" element={protect(<CmsFaq />, ["super_admin"])} />
           <Route path="/app/super/cms/gallery" element={protect(<CmsGallery />, ["super_admin"])} />
+          <Route path="/app/super/cms/contact" element={protect(<CmsContact />, ["super_admin"])} />
 
           {/* Petugas */}
           <Route path="/app/petugas" element={protect(<PetugasDashboard />, ["petugas"])} />
