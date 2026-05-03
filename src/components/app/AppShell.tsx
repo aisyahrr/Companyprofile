@@ -21,6 +21,13 @@ import {
   HiOutlineBoltSlash,
   HiOutlineBolt,
   HiOutlineDocumentArrowUp,
+  HiOutlineSparkles,
+  HiOutlineUserGroup,
+  HiOutlineBriefcase,
+  HiOutlineChatBubbleLeftRight,
+  HiOutlineNewspaper,
+  HiOutlineQuestionMarkCircle,
+  HiOutlinePhone,
 } from "react-icons/hi2";
 import { getSession, logout, Role, ROLE_LABEL } from "@/lib/auth";
 import { loadNotifs, markNotifRead } from "@/lib/certStore";
@@ -52,9 +59,16 @@ const menus: Record<Role, { label: string; items: MenuItem[] }[]> = {
     {
       label: "CMS Landing Page",
       items: [
+        { title: "Hero Section", url: "/app/super/cms/hero", icon: HiOutlineSparkles },
         { title: "Tentang Perusahaan", url: "/app/super/cms/about", icon: HiOutlineBuildingOffice2 },
         { title: "Layanan", url: "/app/super/cms/services", icon: HiOutlineDocumentText },
+        { title: "Tim", url: "/app/super/cms/team", icon: HiOutlineUserGroup },
+        { title: "Portofolio", url: "/app/super/cms/portfolio", icon: HiOutlineBriefcase },
+        { title: "Testimoni", url: "/app/super/cms/testimonials", icon: HiOutlineChatBubbleLeftRight },
+        { title: "Blog", url: "/app/super/cms/blog", icon: HiOutlineNewspaper },
+        { title: "FAQ", url: "/app/super/cms/faq", icon: HiOutlineQuestionMarkCircle },
         { title: "Galeri", url: "/app/super/cms/gallery", icon: HiOutlinePhoto },
+        { title: "Kontak", url: "/app/super/cms/contact", icon: HiOutlinePhone },
       ],
     },
   ],
